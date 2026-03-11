@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0b0b0f">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<title>Carbon & Mommy</title>
+</head>
+<body>
+
+<div class="love-bubble" id="love-bubble"></div>
+
+<div class="sky">
+  <div class="stars"></div>
+  <img src="web-left.png" class="web web-left">
+  <img src="web-right.png" class="web web-right">
+</div>
+
+<canvas id="stars"></canvas>
+
+<div class="aura"></div>
+<div class="moon" id="moon"></div>
+
+<div class="bats">
+<span>🦇</span>
+<span>🦇</span>
+<span>🦇</span>
+</div>
+
+<div class="ritual" id="ritual">
+  <div class="ritual-text">Entering our eternal night…</div>
+</div>
+
+<div class="viewport">
+
+<main class="container hidden" id="home">
+
+<h1 class="title">Carbon & Mommy</h1>
+
+<div class="greeting" id="greeting"></div>
+<div class="timer" id="timer"></div>
+
+<div class="buttons">
+<button onclick="showBubble(missYou)">I miss you</button>
+<button onclick="showBubble(sad)">I’m sad</button>
+<button onclick="showBubble(hug)">I need a hug</button>
+<button onclick="showBubble(kiss)">I want a kiss</button>
+<button onclick="showBubble(overthinking)">I’m overthinking</button>
+<button onclick="showBubble(reasons)">Reasons why I love you</button>
+</div>
+
+<div class="whisper-box">
+  <input id="whisperInput" placeholder="whisper to me…">
+  <button onclick="whisper()">🖤</button>
+</div>
+
+<div class="love-letter" id="loveLetter">
+My soul chose you before time existed.
+</div>
+
+</main>
+</div>
+
+<audio id="bg-music" src="music.mp3" loop></audio>
+
+<script src="missyou.js"></script>
+<script src="sad.js"></script>
+<script src="hug.js"></script>
+<script src="kiss.js"></script>
+<script src="overthinking.js"></script>
+<script src="reasons.js"></script>
+<script src="script.js"></script>
+
+<div class="fog"></div>
+
+</body>
+</html>

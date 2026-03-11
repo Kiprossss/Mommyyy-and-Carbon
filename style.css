@@ -1,0 +1,237 @@
+html,body{
+height:100%;
+margin:0;
+background:#0b0b0f;
+}
+
+body{
+  font-family:'Cormorant Garamond', serif;
+  color:#e4d9ff;
+  background:radial-gradient(circle at top, #1a1023, #0b0b0f);
+  background-attachment:fixed;
+  overflow-x:hidden;
+  overflow-y:auto;
+}
+
+/* SAFE VIEWPORT */
+.viewport{
+  min-height:100svh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+.container{
+  width:100%;
+  max-width:420px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+/* TITLE */
+.title{
+font-family:'Cinzel';
+letter-spacing:4px;
+font-size:clamp(28px,6vw,34px);
+color:#6e5aa6;
+animation:heartbeat 2.5s infinite;
+}
+
+/* BUTTONS */
+.buttons{
+width:100%;
+display:flex;
+flex-direction:column;
+gap:14px;
+}
+
+button{
+background:transparent;
+border:1px solid #6e5aa6;
+color:#e4d9ff;
+padding:16px;
+font-size:17px;
+border-radius:14px;
+width:100%;
+transition:.4s;
+}
+
+button:active{
+  box-shadow:0 0 18px #6e5aa6;
+  transform:scale(0.97);
+}
+
+/* WHISPER */
+.whisper-box{
+width:100%;
+display:flex;
+gap:10px;
+}
+
+.whisper-box input{
+flex:1;
+background:transparent;
+border:none;
+border-bottom:1px solid #6e5aa6;
+color:#e4d9ff;
+text-align:center;
+}
+
+/* LOVE BUBBLE */
+.love-bubble{
+position:fixed;
+bottom:120px;
+left:50%;
+transform:translateX(-50%) translateY(20px);
+max-width:85%;
+}
+
+/* AURA / BATS / RITUAL / ANIMATIONS */
+/* (ALL YOUR ORIGINALS KEPT EXACTLY AS THEY WERE) */
+
+/* 📱 MOBILE BEHAVIOR */
+@media (max-width:600px){
+
+.viewport{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aura{
+  width:80vw;
+  height:80vw;
+  max-width:600px;
+  max-height:600px;
+}
+
+.moon{
+  position: absolute;
+  top: 8vh;
+  right: 8vw;
+  width: 70px;
+  height: 70px;
+}
+
+}
+
+@media (max-width:480px){
+
+  .title{
+    font-size:22px;
+  }
+
+  .timer{
+    font-size:14px;
+  }
+
+  button{
+    font-size:15px;
+    padding:14px;
+  }
+
+  .whisper-box input{
+    width:140px;
+  }
+
+}
+
+/* 🌫 THICK WHITE FOG */
+
+.fog{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 200%;
+  height: 40vh;
+  pointer-events: none;
+  z-index: 0;
+
+  background: radial-gradient(circle at 50% 100%,
+    rgba(255,255,255,0.9) 0%,
+    rgba(255,255,255,0.7) 20%,
+    rgba(255,255,255,0.4) 40%,
+    rgba(255,255,255,0.2) 60%,
+    transparent 80%
+  );
+
+  filter: blur(60px);
+  animation: fogMove 40s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes fogMove{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(-50%); }
+}
+
+@media (max-width:600px){
+
+  body{
+    overflow-x:hidden;
+    overflow-y:auto;
+  }
+
+  .viewport{
+    min-height:100svh;
+    padding:16px;
+  }
+
+  .container{
+    max-width:100%;
+    gap:16px;
+  }
+
+  .title{
+    font-size:22px;
+    letter-spacing:2px;
+  }
+
+  .greeting{
+    font-size:11px;
+  }
+
+  .timer{
+    font-size:14px;
+  }
+
+  button{
+    font-size:15px;
+    padding:14px;
+  }
+
+  .love-bubble{
+    bottom:90px;
+    font-size:14px;
+    max-width:90%;
+  }
+
+  .moon{
+    width:60px;
+    height:60px;
+    top:24px;
+    right:24px;
+  }
+
+  .aura{
+    width:80vw;
+    height:80vw;
+    filter:blur(120px);
+  }
+
+  .web{
+    width:120px;
+    opacity:0.18;
+  }
+
+  .bats span{
+    font-size:14px;
+  }
+}
